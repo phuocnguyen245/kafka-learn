@@ -1,0 +1,13 @@
+config:
+  target: "http://localhost:8000"
+  phases:
+    - duration: 1 # Thời gian test (60 giây)
+      arrivalRate: 10000 # Số lượng yêu cầu gửi mỗi giây
+scenarios:
+  - flow:
+      - post:
+          url: "/transactions" # Thay bằng endpoint của bạn
+          json:
+            username: "useraaacyw"
+            balance: 1000
+            type: "credit"
